@@ -5,14 +5,15 @@ public class Calculator {
 		Scanner s = new Scanner(System.in);
 		
 		int exit = 0;
-		while (exit!= 4) 
-	{
+		while (exit != 7) {
 		System.out.println("Select an option");
 		System.out.println("1. Addition");
 		System.out.println("2. Subtraction");
 		System.out.println("3. Multiplication");
 		System.out.println("4. Division");
-		System.out.println("5. Exit");
+		System.out.println("5. Square of a number");
+		System.out.println("6. a^b");
+		System.out.println("7. Exit");
 		int opt = s.nextInt();
 
 		switch (opt)
@@ -50,7 +51,19 @@ public class Calculator {
 			}
 			break;
 		case 5:
-			exit = 5;
+			System.out.println("Enter a number to find its square: ");
+			int num9 = s.nextInt();
+			System.out.println("Ans => "+num9+" ^ 2 = "+(num9*num9));
+			break;
+		case 6:
+			System.out.println("Enter the value of a: ");
+			double a = s.nextDouble();
+			System.out.println("Enter the value of b: ");
+			double b = s.nextDouble();
+			System.out.println("Ans => "+a+" ^ "+b+" = "+Math.pow(a, b));
+			break;
+		case 7:
+			exit = 7;
 			break;
 		default:
 			System.out.println("Wrong Selection. \nTry again\n");
