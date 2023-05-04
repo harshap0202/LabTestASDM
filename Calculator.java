@@ -45,6 +45,6 @@ public class Calculator {
 			break;
 			}	
 		}
-			System.out.println("Session Terminated");
+		System.out.println("Session Terminated");
 	}
 }
