@@ -11,7 +11,8 @@ public class Calculator {
 		System.out.println("1. Addition");
 		System.out.println("2. Subtraction");
 		System.out.println("3. Multiplication");
-		System.out.println("4. Exit");
+		System.out.println("4. Division");
+		System.out.println("5. Exit");
 		int opt = s.nextInt();
 
 		switch (opt)
@@ -38,7 +39,18 @@ public class Calculator {
 			System.out.println("Ans => "+num5+" x "+num6+" = "+(num5*num6));
 			break;
 		case 4:
-			exit = 4;
+			System.out.println("For Division enter 1st Number : ");
+			int num7 = s.nextInt();
+			System.out.println("Enter 2nd Number : ");
+			int num8 = s.nextInt();
+			if (num8 == 0) {
+				System.out.println("Error: Division by zero");
+			} else {
+				System.out.println("Ans => "+num7+" / "+num8+" = "+((double)num7/num8));
+			}
+			break;
+		case 5:
+			exit = 5;
 			break;
 		default:
 			System.out.println("Wrong Selection. \nTry again\n");
